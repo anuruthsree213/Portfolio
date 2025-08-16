@@ -1,0 +1,27 @@
+/* The <header> element rendered by this component */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;          /* top:0; left:0; right:0 */
+  z-index: 50;
+  width: 100%;
+  transition:
+    height 0.5s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+/* Start tall */
+header.expanded {
+  height: 30vh;
+  background: transparent;
+}
+
+/* Shrink on scroll */
+header.shrunk {
+  height: 15vh;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
