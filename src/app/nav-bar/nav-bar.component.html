@@ -1,0 +1,29 @@
+<div class="navbar-container">
+  <!-- Name/Logo Center -->
+  <div class="logo">
+    Anuruth Sree Venkatachalapathy
+  </div>
+
+  <!-- Desktop Nav Row -->
+  <ul class="links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle menu">
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+  </button>
+
+  <!-- Mobile Nav (stacked) -->
+  <div *ngIf="isMenuOpen" class="mobile-menu">
+    <a href="#home" (click)="closeMenu()">Home</a>
+    <a href="#about" (click)="closeMenu()">About</a>
+    <a href="#projects" (click)="closeMenu()">Projects</a>
+    <a href="#contact" (click)="closeMenu()">Contact</a>
+  </div>
+</div>
