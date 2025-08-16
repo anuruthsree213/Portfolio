@@ -1,0 +1,86 @@
+/* leave space for 30vh header at top of page */
+.page-offset { padding-top: 15vh; }
+
+.about-card {
+  width: 80%;
+  margin: 2rem auto;
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  background: #f3f4f6; /* soft gray background */
+  border-radius: 1.5rem; /* rounded corners */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Left (Image Section) */
+.about-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  padding: 2rem;
+}
+.about-left img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Right (Content Section) */
+.about-right {
+  flex: 1.5;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+.about-right h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+.about-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .about-card {
+    width: 90%;
+  }
+  .about-right h2 {
+    font-size: 1.8rem;
+  }
+  .about-right p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+  .about-left {
+    padding: 1.5rem;
+  }
+  .about-left img {
+    max-width: 200px;
+  }
+  .about-right {
+    padding: 1.5rem;
+  }
+  .about-right h2 {
+    font-size: 1.5rem;
+  }
+  .about-right p {
+    font-size: 0.9rem;
+  }
+}

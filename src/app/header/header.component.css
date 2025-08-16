@@ -13,7 +13,7 @@ header {
 
 /* Start tall */
 header.expanded {
-  height: 30vh;
+  height: 15vh;
   background: transparent;
 }
 

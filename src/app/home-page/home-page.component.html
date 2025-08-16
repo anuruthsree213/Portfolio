@@ -1,13 +1,18 @@
-<app-header></app-header>
-
 <main class="page-offset" id="home">
-  <section class="hero">
-    <h1>Hi, I’m Anuruth 👋</h1>
-    <p>Aspiring Generative AI Engineer | Data Scientist</p>
-    <a class="cta" href="#projects">View My Work</a>
-  </section>
+  <div class="hero">
+    <h1>Hi, I’m Anuruth</h1>
+    <h2><i>AI Enthusiast</i></h2>
+    <p>SQL | Power BI | Python | Gen AI</p>
+    <a class="cta" (click)="navigateTo('projects')">View My Work</a>
+  </div>
 
-  <section id="about" class="section"><h2>About</h2></section>
-  <section id="projects" class="section alt"><h2>Projects</h2></section>
-  <section id="contact" class="section"><h2>Contact</h2></section>
+  <!-- <section id="about" class="section">
+    <app-about></app-about>
+  </section>
+  <section id="projects" class="section alt">
+    <app-project-page></app-project-page>
+  </section>
+  <section id="contact" class="section">
+    <app-contact-page></app-contact-page>
+  </section> -->
 </main>

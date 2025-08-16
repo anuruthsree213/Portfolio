@@ -1,9 +1,9 @@
 /* leave space for 30vh header at top of page */
-.page-offset { padding-top: 30vh; }
+.page-offset { padding-top: 15vh; }
 
 /* Simple demo styling */
 .hero {
-  min-height: calc(100vh - 30vh);
+  min-height: calc(100vh - 15vh);
   display: grid;
   place-items: center;
   text-align: center;
@@ -17,13 +17,18 @@
   display: inline-block;
   margin-top: 12px;
   padding: 10px 16px;
-  background: #4f46e5;
+  background: #131313;
   color: #fff;
   text-decoration: none;
   border-radius: 12px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.cta:hover{
+  background: #001b5e;
 }
 
 /* filler sections */
-.section { min-height: 100vh; display: grid; place-items: center; }
+.section { min-height: 100vh;display: grid; place-items: center; }
 .section.alt { background: #f3f4f6; }

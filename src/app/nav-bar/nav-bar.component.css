@@ -1,109 +1,109 @@
 .navbar-container {
   display: flex;
-  flex-direction: column;   /* stack logo above nav */
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-  padding: 0 1rem; /* 16px → 1rem */
-}
-
-/* Logo */
-.logo {
-  font-size: clamp(1.5rem, 5vw, 2.25rem); /* 24px–36px */
-  font-weight: 800;
-  margin-bottom: 0.75rem; /* 12px → 0.75rem */
-  letter-spacing: 0.0625rem; /* 1px → 0.0625rem */
-}
-
-/* Desktop Nav Links (row) */
-.links {
-  display: none;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 2rem; /* 32px → 2rem */
-}
-
-.links li {
-  display: inline-block;
-}
-
-.links a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.125rem; /* ~18px */
-  color: #111827;
-  transition: color 0.2s ease;
-}
-
-.links a:hover {
-  color: #571010;
-}
-
-/* Mobile Hamburger */
-.hamburger {
-  position: absolute;
-  top: 0.5rem;  /* 8px → 0.5rem */
-  right: 1rem;  /* 16px → 1rem */
-  background: transparent;
-  border: 0;
-  display: inline-flex;
   flex-direction: column;
-  gap: 0.375rem; /* 6px → 0.375rem */
-  padding: 0.5rem; /* 8px → 0.5rem */
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #131313;
+}
+
+/* Row 1: Logo */
+.logo {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03rem;
   cursor: pointer;
 }
 
+/* Row 2: Links (scrollable on small screens) */
+.links-row {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+.links-row::-webkit-scrollbar { height: 0.4rem; }
+.links-row::-webkit-scrollbar-thumb { background: rgba(0,0,0,.2); border-radius: 1rem; }
+
+.links {
+  display: flex;
+  justify-content: center;     /* desktop center */
+  gap: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #131313;
+  transition: color .2s ease;
+  cursor: pointer;
+}
+.links a:hover { color: #001b5e; }
+
+/* Mobile: make links start-left for nicer scrolling */
+@media (max-width: 48rem) {
+  .links { justify-content: flex-start; padding-inline: 1rem; }
+  .links-row{ display: none;}
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
 .hamburger span {
-  width: 1.5rem;   /* 24px → 1.5rem */
-  height: 0.125rem; /* 2px → 0.125rem */
-  background: #111827;
-  transition: transform 0.25s ease, opacity 0.2s ease;
+  width: 1.5rem;
+  height: 0.125rem;
+  background: #131313;
+  transition: transform .25s ease, opacity .2s ease;
 }
+.hamburger span.open:nth-child(1) { transform: translateY(0.5rem) rotate(45deg); }
+.hamburger span.open:nth-child(2) { opacity: 0; }
+.hamburger span.open:nth-child(3) { transform: translateY(-0.5rem) rotate(-45deg); }
 
-.hamburger span.open:nth-child(1) {
-  transform: translateY(0.5rem) rotate(45deg); /* 8px → 0.5rem */
-}
-
-.hamburger span.open:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger span.open:nth-child(3) {
-  transform: translateY(-0.5rem) rotate(-45deg); /* -8px → -0.5rem */
-}
-
-/* Mobile dropdown */
+/* Mobile stacked menu */
 .mobile-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.08); /* 6px 16px */
+  left: 0; right: 0;
+  background: #fff;
+  box-shadow: 0 0.375rem 1rem rgba(0,0,0,.08);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* 16px → 1rem */
+  gap: 1rem;
   padding: 1rem;
-  z-index: 49;
+  z-index: 50;
 }
-
 .mobile-menu a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.125rem; /* ~18px */
-  color: #111827;
+  font-size: 1rem;
+  color: #131313;
+  cursor: pointer;
 }
 
-/* Responsive: Show nav row on medium+ */
-@media (min-width: 48rem) { /* 768px → 48rem */
-  .links {
-    display: flex;
-  }
-  .hamburger {
-    display: none;
-  }
+/* When menu is open on mobile, hide the scroll row to avoid overlap */
+@media (max-width: 48rem) {
+  .navbar-container.menu-open .links-row { display: none; }
 }
 
+/* Desktop: hide hamburger + mobile menu */
+@media (min-width: 48rem) {
+  .hamburger { display: none; }
+  .mobile-menu { display: none !important; }
+}

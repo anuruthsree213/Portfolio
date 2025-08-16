@@ -1,29 +1,36 @@
-<div class="navbar-container">
-  <!-- Name/Logo Center -->
-  <div class="logo">
+<div class="navbar-container" [class.menu-open]="isMenuOpen">
+  <!-- Row 1: Logo -->
+  <div class="logo" (click)="navigateTo('')">
     Anuruth Sree Venkatachalapathy
   </div>
 
-  <!-- Desktop Nav Row -->
-  <ul class="links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <!-- Row 2: Links (horizontal scroll if overflow) -->
+  <div class="links-row">
+    <ul class="links">
+      <li><a (click)="navigateTo('')">Home</a></li>
+      <li><a (click)="navigateTo('about')">About</a></li>
+      <li><a (click)="navigateTo('projects')">Projects</a></li>
+      <li><a (click)="navigateTo('contact')">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- Mobile Hamburger -->
-  <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle menu">
+  <button
+    class="hamburger"
+    (click)="toggleMenu()"
+    aria-label="Toggle menu"
+    [attr.aria-expanded]="isMenuOpen"
+  >
     <span [class.open]="isMenuOpen"></span>
     <span [class.open]="isMenuOpen"></span>
     <span [class.open]="isMenuOpen"></span>
   </button>
 
-  <!-- Mobile Nav (stacked) -->
-  <div *ngIf="isMenuOpen" class="mobile-menu">
-    <a href="#home" (click)="closeMenu()">Home</a>
-    <a href="#about" (click)="closeMenu()">About</a>
-    <a href="#projects" (click)="closeMenu()">Projects</a>
-    <a href="#contact" (click)="closeMenu()">Contact</a>
-  </div>
+  <!-- Mobile stacked menu -->
+  <nav *ngIf="isMenuOpen" class="mobile-menu">
+    <a (click)="navigateTo('')">Home</a>
+    <a (click)="navigateTo('about')">About</a>
+    <a (click)="navigateTo('projects')">Projects</a>
+    <a (click)="navigateTo('contact')">Contact</a>
+  </nav>
 </div>
