@@ -12,10 +12,24 @@
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   letter-spacing: 0.03rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   /* border: 1px solid #000; */
+}
+
+.logo img{
+  width: 3rem;
+  height: auto;
+  /* border: 1px solid #000; */
+}
+
+.logo p{
+  margin-left: 1rem;
 }
 
 /* Row 2: Links (scrollable on small screens) */
@@ -57,8 +71,12 @@
 
 /* Mobile: make links start-left for nicer scrolling */
 @media (max-width: 48rem) {
-  .links { justify-content: flex-start; padding-inline: 1rem; }
-  .links-row{ display: none;}
+  /* .links { justify-content: flex-start; padding-inline: 1rem; } */
+  /* .links-row{ display: none;} */
+  /* .navbar-container{
+    height: 10vh;
+  } */
+  .logo p{display: none;}
 }
 
 /* Hamburger (mobile only) */
@@ -108,8 +126,8 @@
 
 /* When menu is open on mobile, hide the scroll row to avoid overlap */
 @media (max-width: 48rem) {
-  .navbar-container.menu-open .links-row { display: none; }
-  .navbar-container{flex-direction: row;}
+  /* .navbar-container.menu-open .links-row { display: none; } */
+  /* .navbar-container{flex-direction: row;} */
 }
 
 /* Desktop: hide hamburger + mobile menu */

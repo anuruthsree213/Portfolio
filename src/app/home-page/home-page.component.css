@@ -35,3 +35,132 @@
 /* filler sections */
 .section { min-height: 100vh;display: grid; place-items: center; }
 .section.alt { background: #f3f4f6; }
+
+
+.container{
+  width: 100vm;
+  /* height: calc(100vh - 16vh); */
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  text-align: center;
+  /* gap: 12px; */
+  /* background: #ffedc7; */
+  /* padding: 24px; */
+  justify-content: space-evenly;
+  /* border: 1px solid #000; */
+  flex-wrap: wrap;
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 16vh);
+}
+.column-container{
+  /* flex: 1 1 150px;       cards shrink/grow, base width 250px */
+  /* max-width: 30vm; */
+  min-width: 500px;
+  width: 32%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #000; */
+  background: #ffffff; /* soft gray background */
+  border-radius: 1.5rem; /* rounded corners */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 1rem;
+}
+
+.inner-container{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;   /* stack image and button vertically */
+  align-items: center;      /* center items horizontally */
+  width: 100%;
+  max-width: 300px;         /* optional: limit container width */
+  margin: 0 auto;           /* center on page */
+  gap: 1.5rem;              /* spacing between image and button */
+  padding: 1rem;
+}
+
+.img-container .inner-container {
+  width: 100%;
+}
+
+.img-container .inner-container img {
+  width: 100%;              /* fill the column container */
+  height: auto;             /* maintain aspect ratio */
+  object-fit: cover;        /* crop to fit if necessary */
+  border-radius: 1rem;      /* optional rounded corners */
+  display: block;
+}
+
+.img-container .cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  color: #131313;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.img-container .cta:hover {
+  background-color: #131313;
+  color: #fff;
+}
+
+.about-text {
+  font-family: 'Roboto', sans-serif; /* consistent with portfolio */
+  font-size: 1rem;       /* can increase to 1.1rem for larger text */
+  line-height: 1.8rem;   /* more spacing between lines */
+  color: #111827;        /* dark text for readability */
+  max-width: 60rem;      /* limit width for large screens */
+  margin: 0 auto;        /* center content */
+  padding: 1rem 1.5rem;  /* some padding around text */
+}
+
+.about-text p {
+  margin-bottom: 1.5rem; /* space between paragraphs */
+}
+
+/* .column-container:hover{
+  color: #fff;
+  background-color: #131313;
+}
+
+.column-container:hover .about-text{
+  color: #fff;
+} */
+
+.resume_download {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #131313;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.resume_download:hover {
+  background-color: #131313;
+  color: #fff;
+}

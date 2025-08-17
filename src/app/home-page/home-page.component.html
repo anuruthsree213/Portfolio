@@ -1,19 +1,46 @@
 <app-header></app-header>
 <main class="page-offset" id="home">
-  <div class="hero">
+  <!-- <div class="hero">
     <h1>Hi, I’m Anuruth</h1>
     <h2><i>AI Enthusiast</i></h2>
     <p>SQL | Power BI | Python | Gen AI</p>
     <a class="cta" (click)="navigateTo('projects')">View My Work</a>
-  </div>
+  </div> -->
 
-  <!-- <section id="about" class="section">
-    <app-about></app-about>
-  </section>
-  <section id="projects" class="section alt">
-    <app-project-page></app-project-page>
-  </section>
-  <section id="contact" class="section">
-    <app-contact-page></app-contact-page>
-  </section> -->
+  <div class="container">
+    <div class="column-container">
+      <div class="about-text">
+        <p>Hi, I’m <strong>Anuruth</strong>, a Data Analyst & BI Specialist with 4 years of experience in Software
+          Development. </p>
+
+        <p>Skilled in <strong>Power BI, SQL, Python, and Gen AI</strong>.</p>
+
+        <p>Recognized with the <strong>“Wall of Fame”</strong> award at Accenture for proactive solution delivery and
+          innovation in <strong>AI-enhanced</strong> analytics.</p>
+
+        <p>Passionate about <strong>Artificial Intelligence</strong> to
+          create next-generation decision support systems.</p>
+      </div>
+    </div>
+    <div class="img-container">
+      <div class="inner-container">
+        <!-- img for portfolio -->
+        <img src="assets/profile.jpg" alt="profile">
+      </div>
+
+      <div class="inner-container">
+        <a class="cta" (click)="navigateTo('projects')">View My Work</a>
+      </div>
+    </div>
+    <div class="column-container">
+      <div class="about-text">
+        <!-- <h2><strong>SkillSet:</strong></h2> -->
+        <p>Please download Resume Here</p>
+        <!-- Resume download -->
+         <a class="resume_download" [href]="resumeUrl" download="Resume_Anuruth.pdf">
+  Download Resume
+</a>
+      </div>
+    </div>
+  </div>
 </main>

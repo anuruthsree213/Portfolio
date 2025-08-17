@@ -10,6 +10,8 @@ export class HomePageComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  resumeUrl: string = 'assets/Resume_Anuruth.pdf';
+
   ngOnInit(): void {
   }
 

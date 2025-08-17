@@ -1,21 +1,22 @@
-<div class="navbar-container" [class.menu-open]="isMenuOpen">
+<div class="navbar-container">
   <!-- Row 1: Logo -->
   <div class="logo" (click)="navigateTo('')">
-    Anuruth Sree Venkatachalapathy
+    <img src="assets/logo_header.png" alt="logo">
+    <p>Anuruth Sree Venkatachalapathy</p>
   </div>
 
   <!-- Row 2: Links (horizontal scroll if overflow) -->
   <div class="links-row">
     <ul class="links">
       <li><a (click)="navigateTo('')">Home</a></li>
-      <li><a (click)="navigateTo('about')">About</a></li>
+      <!-- <li><a (click)="navigateTo('about')">About</a></li> -->
       <li><a (click)="navigateTo('projects')">Projects</a></li>
       <li><a (click)="navigateTo('contact')">Contact</a></li>
     </ul>
   </div>
 
   <!-- Mobile Hamburger -->
-  <button
+  <!-- <button
     class="hamburger"
     (click)="toggleMenu()"
     aria-label="Toggle menu"
@@ -26,11 +27,11 @@
     <span [class.open]="isMenuOpen"></span>
   </button>
 
-  <!-- Mobile stacked menu -->
+  Mobile stacked menu
   <nav *ngIf="isMenuOpen" class="mobile-menu">
     <a (click)="navigateTo('')">Home</a>
     <a (click)="navigateTo('about')">About</a>
     <a (click)="navigateTo('projects')">Projects</a>
     <a (click)="navigateTo('contact')">Contact</a>
-  </nav>
+  </nav> -->
 </div>
