@@ -1,10 +1,10 @@
 /* leave space for 30vh header at top of page */
-.page-offset { padding-top: 15vh; }
+.page-offset { padding-top: 0; }
 
 .about-card {
   width: 80%;
   margin: 2rem auto;
-  height: 75vh;
+  height: 74vh;
   display: flex;
   flex-direction: row;
   background: #f3f4f6; /* soft gray background */
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e5e7eb;
+  background: #f4f4f4;
   padding: 2rem;
 }
 .about-left img {

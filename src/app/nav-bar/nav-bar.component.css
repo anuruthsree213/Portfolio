@@ -15,6 +15,7 @@
   margin-bottom: 0.5rem;
   letter-spacing: 0.03rem;
   cursor: pointer;
+  /* border: 1px solid #000; */
 }
 
 /* Row 2: Links (scrollable on small screens) */
@@ -29,22 +30,30 @@
 
 .links {
   display: flex;
-  justify-content: center;     /* desktop center */
-  gap: 2rem;
-  padding: 0.5rem 0;
-  margin: 0;
+  justify-content: space-evenly;     /* desktop center */
+  align-items: center;
+  /* gap: 6rem; */
+  padding: 0.4rem;
+  margin-top: 0.5rem;
   list-style: none;
   white-space: nowrap;
 }
+
 .links a {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   color: #131313;
+  padding: 0.4rem;
   transition: color .2s ease;
   cursor: pointer;
 }
-.links a:hover { color: #001b5e; }
+.links a:hover { 
+  padding: 0.4rem;
+  background-color: #131313;
+  border-radius: 0.2rem;
+  color: #ffffff;
+}
 
 /* Mobile: make links start-left for nicer scrolling */
 @media (max-width: 48rem) {
@@ -100,6 +109,7 @@
 /* When menu is open on mobile, hide the scroll row to avoid overlap */
 @media (max-width: 48rem) {
   .navbar-container.menu-open .links-row { display: none; }
+  .navbar-container{flex-direction: row;}
 }
 
 /* Desktop: hide hamburger + mobile menu */

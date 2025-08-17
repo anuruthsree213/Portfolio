@@ -1,16 +1,21 @@
+<app-header></app-header>
 <main class="page-offset">
     <div class="projects-container">
         <h2 class="page-title">My Projects</h2>
 
-        <div class="projects-grid">
+        <div *ngIf="projects.length == 0" class="projects-no-grid">
+            <span>No Projects to display</span>
+        </div>
+
+        <div *ngIf="projects.length > 0" class="projects-grid">
             <!-- Project Card -->
             <div class="project-card" *ngFor="let project of projects">
                 <!-- <img [src]="project.image" alt="{{project.title}}" class="project-img" /> -->
-                <div class="project-content">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
+                <!-- <div class="project-content">
+                    <h3>{{ project?.title }}</h3>
+                    <p>{{ project?.description }}</p>
                     <a [href]="project.link" target="_blank" class="btn">View Project</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
