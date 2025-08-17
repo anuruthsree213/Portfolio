@@ -58,7 +58,7 @@
 .column-container{
   /* flex: 1 1 150px;       cards shrink/grow, base width 250px */
   /* max-width: 30vm; */
-  min-width: 31.25rem;
+  min-width: 18.75rem;
   width: 32%;
   height: 75vh;
   display: flex;
