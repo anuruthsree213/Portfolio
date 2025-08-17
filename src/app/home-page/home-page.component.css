@@ -58,7 +58,7 @@
 .column-container{
   /* flex: 1 1 150px;       cards shrink/grow, base width 250px */
   /* max-width: 30vm; */
-  min-width: 500px;
+  min-width: 31.25rem;
   width: 32%;
   height: 75vh;
   display: flex;
@@ -88,7 +88,7 @@
   flex-direction: column;   /* stack image and button vertically */
   align-items: center;      /* center items horizontally */
   width: 100%;
-  max-width: 300px;         /* optional: limit container width */
+  max-width: 18.75rem;         /* optional: limit container width */
   margin: 0 auto;           /* center on page */
   gap: 1.5rem;              /* spacing between image and button */
   padding: 1rem;
