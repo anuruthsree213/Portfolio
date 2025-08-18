@@ -61,8 +61,8 @@
   background: #f9fafb;
   border-radius: 1rem;
   overflow: hidden;
-  width: 100%; /* ✅ full width inside grid */
-  max-width: 100%; /* ✅ prevents overflow */
+  width: 100%; 
+  max-width: 100%; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
